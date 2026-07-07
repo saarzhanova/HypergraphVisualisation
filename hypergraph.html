@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hypergraph Visualization</title>
+  <link rel="stylesheet" href="hypergraph.css" />
+</head>
+<body>
+
+<div id="app">
+  <aside id="sidebar">
+    <h2>Hypergraph</h2>
+
+    <div class="control">
+      <label>
+        Year:
+        <span id="yearLabel"></span>
+      </label>
+      <input id="yearSlider" type="range" />
+    </div>
+
+    <div class="control">
+      <label>Show hyperedges:</label>
+
+      <button class="filter active" data-type="all">All</button>
+      <button class="filter" data-type="ownership">Ownership</button>
+      <button class="filter" data-type="tenancy">Tenancy</button>
+      <button class="filter" data-type="family">Families</button>
+      <button class="filter" data-type="eviction">Evictions</button>
+    </div>
+
+    <div id="details">
+      <h3>Details</h3>
+      <p>Click on a node.</p>
+    </div>
+  </aside>
+
+  <main id="canvas">
+    <svg id="graph"></svg>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="hypergraph.js"></script>
+
+</body>
+</html>
